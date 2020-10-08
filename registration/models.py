@@ -4,7 +4,6 @@ from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.files.images import get_image_dimensions
 
-
 def validate_photo(photo):
     width, height = get_image_dimensions(photo)
     if width < 99 or height < 128:
@@ -39,5 +38,7 @@ class Student(models.Model):
                                                                         ('Others', 'Others')],
                                 default='')
     details_of_pursuing = models.TextField('Details of Higher Studies/Job/Others', max_length=500, default='')
+    transaction_number = models.CharField('Payment transaction number', max_length=30, default='')
+    transaction_date = models.DateField('Date on which transaction was done', default='2020-10-01')
+    amount = models.PositiveSmallIntegerField('Fees paid (amount)', default=0)
     declaration = models.BooleanField('I agree to all the instructions given here', default=False)
-
