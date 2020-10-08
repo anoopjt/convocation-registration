@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block title %} PhD application portal | Login{% endblock %}
+{% block navbar %}PhD application portal of IIIT Tiruchirappalli{% endblock %}
+{% block content %}
+{% load static %}
+{% block extrahead %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/authform.css' %}" />
+{% endblock %}
+<div class="container">
+  <div class="jumbotron">
+    <div id="form">
+      {% include "generic_form.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}
+

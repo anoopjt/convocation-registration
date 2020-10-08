@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'captcha',
+    'crispy_forms',
     'registration',
     'django.contrib.admin',
     'django.contrib.auth',

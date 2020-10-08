@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 
 def success(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("")
 
 # Create your views here.
 def index(request):
@@ -17,12 +17,12 @@ def index(request):
                  if student_form.cleaned_data.get('declaration'):
                      student_form.save()
                  else:
-                     return render(request, 'generic_form.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
+                     return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
                  return render(request, 'success.html')
              else:
-                 return render(request, 'generic_form.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
+                 return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
     else:
         print("StudentForm created")
         student_form = StudentForm()
         print(student_form)
-    return render(request, 'generic_form.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
+    return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
