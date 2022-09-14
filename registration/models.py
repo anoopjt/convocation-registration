@@ -39,6 +39,6 @@ class Student(models.Model):
                                 default='')
     details_of_pursuing = models.TextField('Details of Higher Studies/Job/Others', max_length=500, default='')
     transaction_number = models.CharField('Payment transaction number', max_length=30, default='')
-    transaction_date = models.DateField('Date on which transaction was done', default='2020-10-01')
+    transaction_date = models.DateField('Date on which transaction was done', default='2022-09-14')
     amount = models.PositiveSmallIntegerField('Fees paid (amount)', default=0)
     declaration = models.BooleanField('I agree to all the instructions given here', default=False)
