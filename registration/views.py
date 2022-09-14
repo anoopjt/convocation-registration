@@ -17,12 +17,12 @@ def index(request):
                  if student_form.cleaned_data.get('declaration'):
                      student_form.save()
                  else:
-                     return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
+                     return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2022'})
                  return render(request, 'success.html')
              else:
-                 return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
+                 return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2022'})
     else:
         print("StudentForm created")
         student_form = StudentForm()
         print(student_form)
-    return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2020'})
+    return render(request, 'index.html', {'form': student_form, 'button': 'Submit', 'heading': 'Registration Form for Convocation 2022'})
