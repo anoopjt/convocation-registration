@@ -30,8 +30,8 @@ class Student(models.Model):
     postal_code = models.PositiveIntegerField('Postal Code', default=0)
     country = models.CharField('Country', max_length=100, default='')
     photo = models.ImageField('Photo of Candidate', upload_to='photos', default='', validators=[validate_photo])
-    mode_of_attendance = models.CharField('I wish to attend the convocation by', max_length=12,choices=[('Computer', 'Computer'),
-                                                         ('Mobile Phone', 'Mobile Phone')],
+    mode_of_attendance = models.CharField('I wish to attend the convocation by', max_length=12,choices=[('Offline Mode', 'Offline Mode')],
+                                                         
                                   default='')
     pursuing = models.CharField('I am pursuing', max_length=20,choices=[('Higher Studies', 'Higher Studies'),
                                                                         ('Job', 'Job'),
