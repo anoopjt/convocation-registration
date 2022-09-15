@@ -24,7 +24,7 @@ class Student(models.Model):
     personal_email = models.EmailField('Email address (Personal)', max_length=200, default='')
     institute_email = models.EmailField('Email address (Institute)', max_length=200, default='')
     mobile_number = models.CharField('Phone number', max_length=20, default='')
-    address = models.TextField('', max_length=500, default='')
+    address = models.TextField('Address for communication', max_length=500, default='')
     city = models.CharField('City', max_length=100, default='')
     state = models.CharField('State', max_length=50, default='')
     postal_code = models.PositiveIntegerField('Postal Code', default=0)
