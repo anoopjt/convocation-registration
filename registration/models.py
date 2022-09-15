@@ -30,15 +30,15 @@ class Student(models.Model):
     postal_code = models.PositiveIntegerField('Postal Code', default=0)
     country = models.CharField('Country', max_length=100, default='')
     photo = models.ImageField('Photo of Candidate', upload_to='photos', default='', validators=[validate_photo])
-    mode_of_attendance = models.CharField('I wish to attend the convocation by', max_length=12,choices=[('Computer', 'Computer'),
-                                                         ('Mobile Phone', 'Mobile Phone')],
-                                  default='')
+    mode_of_attendance = models.CharField('I will attend the convocation in person', max_length=12,choices=[('Yes', 'Yes'),
+                                                         ('No', 'No')],
+                                  default='Yes')
     pursuing = models.CharField('I am pursuing', max_length=20,choices=[('Higher Studies', 'Higher Studies'),
                                                                         ('Job', 'Job'),
                                                                         ('Others', 'Others')],
                                 default='')
     details_of_pursuing = models.TextField('Details of Higher Studies/Job/Others', max_length=500, default='')
     transaction_number = models.CharField('Payment transaction number', max_length=30, default='')
-    transaction_date = models.DateField('Date on which transaction was done', default='2020-10-01')
+    transaction_date = models.DateField('Date on which transaction was done', default='2022-09-01')
     amount = models.PositiveSmallIntegerField('Fees paid (amount)', default=0)
     declaration = models.BooleanField('I agree to all the instructions given here', default=False)
